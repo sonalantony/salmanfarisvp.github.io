@@ -62,7 +62,7 @@ DIY-Audio-Amplifier:
   category: hardware
   url: /projects/diyaudioamplifier/
   img: /assets/img/projects/diyaudioamplifier.jpg
-  description:Simple Audio Amplifier based on LM386.
+  description: Simple Audio Amplifier based on LM386.
   excerpt: LM386 basically a low voltage audio power amplifier. It is suitable for battery-powered devices such as radios, guitar amplifiers, and hobby electronics projects. The IC consists of an 8 pin dual in-line package (DIP-8) and can output 0.25 to 1 watts of power, depending on the model, using a 9-volt power supply.
   youtube: http://www.youtube.com/embed/vcGQ9vh7Vzc
   links:
