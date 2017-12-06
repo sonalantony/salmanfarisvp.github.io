@@ -26,7 +26,7 @@ SIGHT:For-the-Blind:
       url: https://github.com/FoxLabMakerSpace/SIGHT-For-the-Blind
     -
       name: View blog post
-      url: /blog/2017/30/10/video-streaming-on-edison
+      url: /blog/2017/30/10/sight
 
 edison-arduino101-iot:
   category: hardware
