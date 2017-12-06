@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <title>Introducing Reading Quantified | Salman Faris</title>
+    
+
+    <link rel="shortcut icon" sizes="16x16 32x32 64x64 128x128" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="/assets/favicon-152.png">
+    
+    <!-- Site base CSS -->
+    <link rel="stylesheet" href="/css/base.css">
+    
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css">
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54477708-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">
+    <div class="logo-container">
+      <span id="logo-drejkim">Salman</span>
+      <span id="logo-drejkim-easter-egg">Salman faris</span>
+    </div>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      
+      
+        
+          <li >
+              <a class="nav-link" href="/">Home</a>
+          </li>
+        
+      
+        
+          <li >
+              <a class="nav-link" href="/projects/">Projects</a>
+          </li>
+        
+      
+        
+          <li >
+              <a class="nav-link" href="/blog/">Blog</a>
+          </li>
+        
+      
+    </ul>
+
+    <ul class="nav navbar-nav ml-auto">
+      
+      <li>
+        <a class="nav-link" href="http://www.linkedin.com/in/estherjunkim">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="nav-link" href="https://scholar.google.com/citations?hl=en&user=QfQuFmgAAAAJ">
+          <i class="ai ai-google-scholar-square"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="nav-link" href="https://github.com/drejkim">
+          <i class="fa fa-github-square"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="nav-link" href="https://www.youtube.com/c/estherkimdr">
+          <i class="fa fa-youtube-square"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="nav-link" href="https://twitter.com/drejkim">
+          <i class="fa fa-twitter-square"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+      <div class="mb-3">
+        <h1>Introducing Reading Quantified</h1>
+        <p class="text-monospace text-muted">24 November 2015</p>
+      </div>
+      
+      <div class="mb-5"><h2 id="background">Background</h2>
+
+<p>A few years ago, Barnes &amp; Noble gave out free ebooks to promote their Classics Editions, and I ended up downloading way more ebooks than I knew what to do with. The vast majority of them stayed unread in my ereader for a long time. I also had many other books on my list that I wanted to read. I then found this <a href="http://lifehacker.com/my-secret-to-reading-a-lot-of-books-514189426">Lifehacker article</a> in 2014, which shows you how to structure your reading with <a href="https://trello.com/b/mgqBN7ZV">Trello</a>.</p>
+
+<figure class="figure">
+  <img class="figure-img img-fluid border rounded" src="/assets/img/reading-quantified/trello-books-board.png" alt="Trello Books board" />
+  <figcaption class="figure-caption text-center">Screenshot of my <a class="text-dark" href="https://trello.com/b/mgqBN7ZV">Trello Books</a> board</figcaption>
+</figure>
+
+<p>So far, Trello has been great. It has given me a visual way to organize my books. But not long after I started using it, I wanted to track my progress in more detail. I wanted to know how many books I’ve read so far, how long it takes me to read a book, etc. This information isn’t readily available by looking at my board. As a result, I decided to create a dashboard that accomplishes just that: <a href="http://www.drejkim.com/reading-quantified">Reading Quantified</a>.</p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>The first step involves getting key information about my books using the <a href="https://developers.trello.com/">Trello API</a>. As you can see in the screenshot of my Trello board, it consists of 4 lists and each book is given its own card. Certain activities, like moving cards from one list to another are logged. All this information is available from the Trello API. So, I used <a href="https://github.com/drejkim/reading-quantified-py">Python</a> to fetch and parse the relevant information for each book, then save this information to <a href="http://www.parse.com">Parse</a>, a cloud database.</p>
+
+<figure class="figure">
+  <img class="figure-img img-fluid border rounded" src="/assets/img/reading-quantified/trello-card.png" alt="Trello card" />
+  <figcaption class="figure-caption text-center">Screenshot of one of my Trello cards</figcaption>
+</figure>
+
+<p>The second step grabs the data from Parse and visualizes key metrics on a web-based dashboard (see <a href="https://github.com/drejkim/reading-quantified">GitHub</a> for the code). Right now, the dashboard is very simple. It consists of two key performance indicators (KPIs): “total number of books finished” and “average days to finish”, as well as a table listing the books I have finished so far.</p>
+
+<figure class="figure">
+  <img class="figure-img img-fluid border rounded" src="/assets/img/reading-quantified/dashboard.png" alt="Reading Quantified dashboard" />
+  <figcaption class="figure-caption text-center">Screenshot of <a class="text-dark" href="http://www.drejkim.com/reading-quantified">Reading Quantified</a> (v0.1)</figcaption>
+</figure>
+
+<p>At the moment, the dashboard indicates I have finished one book. If you look at my board, you can see there are a number of finished books. Long story short, when I started this project, there was a mishap, and I lost all the activities of my old cards when I copied and moved them into my public Books board. It’s okay though! I may be starting over at one, but it gives me extra motivation to continue going through my list of books.</p>
+
+<h2 id="next-steps">Next steps</h2>
+
+<p>The first version of the dashboard is very much a 0.1 version. I plan to actively develop this over the next few months. Expect a lot of updates, including an expanded dashboard and enhancements under the hood. Please continue to check back and see how this project evolves!</p>
+</div>
+
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'salman'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer bg-light">
+  <div class="container text-center">
+    <span class="text-muted small">
+      &#x000A9; 2017 Salman Faris.
+      See <a class="text-dark font-weight-bold" href="https://github.com/drejkim/drejkim.github.io/blob/master/LICENSE.md">license</a>.
+    </span>
+  </div>
+</footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>

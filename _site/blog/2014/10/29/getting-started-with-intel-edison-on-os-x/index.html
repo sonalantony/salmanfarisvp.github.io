@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <title>Getting started with Intel Edison on OS X | Salman Faris</title>
+    
+
+    <link rel="shortcut icon" sizes="16x16 32x32 64x64 128x128" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="/assets/favicon-152.png">
+    
+    <!-- Site base CSS -->
+    <link rel="stylesheet" href="/css/base.css">
+    
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css">
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54477708-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">
+    <div class="logo-container">
+      <span id="logo-drejkim">Salman</span>
+      <span id="logo-drejkim-easter-egg">Salman faris</span>
+    </div>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      
+      
+        
+          <li >
+              <a class="nav-link" href="/">Home</a>
+          </li>
+        
+      
+        
+          <li >
+              <a class="nav-link" href="/projects/">Projects</a>
+          </li>
+        
+      
+        
+          <li >
+              <a class="nav-link" href="/blog/">Blog</a>
+          </li>
+        
+      
+    </ul>
+
+    <ul class="nav navbar-nav ml-auto">
+      
+      <li>
+        <a class="nav-link" href="http://www.linkedin.com/in/estherjunkim">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="nav-link" href="https://scholar.google.com/citations?hl=en&user=QfQuFmgAAAAJ">
+          <i class="ai ai-google-scholar-square"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="nav-link" href="https://github.com/drejkim">
+          <i class="fa fa-github-square"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="nav-link" href="https://www.youtube.com/c/estherkimdr">
+          <i class="fa fa-youtube-square"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="nav-link" href="https://twitter.com/drejkim">
+          <i class="fa fa-twitter-square"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+      <div class="mb-3">
+        <h1>Getting started with Intel Edison on OS X</h1>
+        <p class="text-monospace text-muted">29 October 2014</p>
+      </div>
+      
+      <div class="mb-5"><p><em>Note that much of the following information is available in the <a href="https://communities.intel.com/docs/DOC-23148">Getting Started Guide from Intel</a>. However, there is some additional information for assembling the Mini Breakout Board, SSH-ing over Wi-Fi, and package management.</em></p>
+
+<h2 id="introduction-to-edison">Introduction to Edison</h2>
+
+<p>Last month, Intel launched <a href="http://www.intel.com/content/www/us/en/do-it-yourself/edison.html">Edison</a>, a tiny computing platform that’s just slightly larger than a SD card. Edison is powered by an Intel SoC that includes a dual core Atom CPU and a 32-bit Quark microcontroller, has integrated Wi-Fi and BTLE (Bluetooth Low Energy), and comes pre-packaged with Yocto Linux, Python, and Node.js. Not bad for a tiny computer!</p>
+
+<p>There are two kits that are currently available:</p>
+
+<div class="mb-3">
+  <img src="/assets/img/edison/edison-mini-arduino.jpg" class="img-fluid" alt="Edison kits for Mini and Arduino breakout boards" />
+</div>
+
+<p>The kit on the left comes with a Mini breakout board, while the kit on the right comes with an Arduino breakout board. While the latter is great if you want to build things that are Arduino-compatible, the size of the board is quite large. The Mini breakout board is better if you want a board that has a much smaller footprint.</p>
+
+<h2 id="setting-up-edison-with-the-mini-breakout-board">Setting up Edison with the Mini breakout board</h2>
+
+<p>What’s in the smaller box?</p>
+
+<div class="mb-3">
+  <img src="/assets/img/edison/edison-mini-unboxed.jpg" class="img-fluid" alt="Edison with Mini breakout board unboxed" />
+</div>
+
+<p>The Mini breakout board kit comes with the following: the breakout board (bottom-right), Edison (bottom-center), and a ziplock bag with two hex nuts (bottom-left).</p>
+
+<p>To get Edison onto the board, align the two holes on Edison over the two screws on the board. Push Edison into place until you hear a snap. Then take the two hex nuts (in the ziplock bag) and hand-tighten them onto the screws; they don’t have to be screwed on tight.</p>
+
+<p>Here’s what the assembled Mini breakout board with Edison should look like:</p>
+
+<div class="mb-3">
+  <img src="/assets/img/edison/edison-mini-board.jpg" class="img-fluid" alt="Closeup of Edison on Mini breakout board" />
+</div>
+
+<h2 id="setting-up-edison-with-the-arduino-breakout-board">Setting up Edison with the Arduino breakout board</h2>
+
+<p>What’s in the bigger box?</p>
+
+<div class="mb-3">
+  <img src="/assets/img/edison/edison-arduino-unboxed.jpg" class="img-fluid" alt="Edison with Arduino breakout board unboxed" />
+</div>
+
+<p>The Arduino breakout board kit comes with the following: the breakout board (bottom-right), Edison (bottom-center), and a ziplock bag with a variety of screws and such (bottom-left).</p>
+
+<p>To get Edison onto the board, align the two holes on Edison over the two screws on the board. Push Edison into place until you hear a snap. Then take two hex nuts (in the ziplock bag) and hand-tighten them onto the screws; they don’t have to be screwed on tight.</p>
+
+<p>Note that there are additional screws and such in the ziplock bag, which are used to make a stand for the board. I didn’t find this to be necessary, but feel free to assemble this part if you like.</p>
+
+<p>Here’s what the assembled Mini breakout board with Edison should look like:</p>
+
+<div class="mb-3">
+  <img src="/assets/img/edison/edison-arduino-board.jpg" class="img-fluid" alt="Closeup of Edison on Arduino breakout board" />
+</div>
+
+<h2 id="getting-edison-up-to-date-on-mac-os-x">Getting Edison up-to-date on Mac OS X</h2>
+
+<p>Now that we have assembled the hardware, connect <strong>two</strong> micro USB cables to the board and the other ends to the computer.</p>
+
+<div class="mb-3">
+  <img src="/assets/img/edison/edison-connected.jpg" class="img-fluid" alt="Edison connected" />
+</div>
+
+<p>The black cable is used to power Edison. (The port is also USB On-The-Go, where it can act as host or a peripheral.) The white cable is used for serial communication with the computer. Later on, we’ll set up Wi-Fi so that we can SSH into Edison over Wi-Fi, which eliminates the need for using the white cable. Note that the above picture shows the Mini breakout board, but setup is essentially the same on the Arduino breakout board.</p>
+
+<p>To get Edison up-to-date, download the <a href="https://communities.intel.com/docs/DOC-23242">Edison Yocto complete image</a> and follow these <a href="https://communities.intel.com/docs/DOC-23193">instructions</a> for Mac.</p>
+
+<h2 id="connecting-to-edison-from-mac-os-x">Connecting to Edison from Mac OS X</h2>
+
+<p>To connect to Edison via USB, open a new Terminal window and type the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>screen /dev/cu.usbserial
+</code></pre></div></div>
+
+<p>Press <strong>Tab</strong> to auto-complete:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>screen /dev/cu.usbserial-A402EXQL
+</code></pre></div></div>
+
+<p>Then type <code class="highlighter-rouge">115200 -L</code>. The final line should look similar to this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>screen /dev/cu.usbserial-A402EXQL 115200 -L
+</code></pre></div></div>
+
+<p>Note that the characters after <code class="highlighter-rouge">cu.usbserial-</code> may be different for you.</p>
+
+<p>Press <strong>Enter</strong>. A blank screen will appear. Press <strong>Enter</strong> a few more times until text appears on the screen. The Terminal window should contain text similar to this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Poky (Yocto Project Reference Distro) 1.6 edison ttyMFD2
+
+edison login:
+</code></pre></div></div>
+
+<p>At the login prompt, type <code class="highlighter-rouge">root</code> and press <strong>Enter</strong>. You may be prompted for a password, but if you’ve never set up Edison before, just hit <strong>Enter</strong>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>edison login: root
+Password:
+root@edison:~#
+</code></pre></div></div>
+
+<p>Congratulations, you are now connected to Edison from your Mac!</p>
+
+<h2 id="configuring-edison-and-setting-up-wi-fi">Configuring Edison and setting up Wi-Fi</h2>
+
+<p>Now that you’re connected to Edison, let’s configure it:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>configure_edison --setup
+</code></pre></div></div>
+
+<p>This will walk you through the setup process. Use the <code class="highlighter-rouge">--help</code> flag to see other configuration options that are available.</p>
+
+<p>After pressing <strong>Enter</strong>, you will be prompted to give Edison a unique name. For example purposes, let’s give the name <code class="highlighter-rouge">myedison</code>, but feel free to choose your own name:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configure Edison: Device Name
+
+Give this Edison a unique name.
+This will be used for the access point SSID and mDNS address.
+Make it at least five characters long (leave empty to skip): myedison
+Is myedison correct? [Y or N]: Y
+</code></pre></div></div>
+
+<p>You will then be prompted to enter a password:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configure Edison: Device Password
+
+Enter a new password (leave empty to abort)
+This will be used to connect to the access point and login to the device.
+Password:       ******
+Please enter the password again:        ******
+The device password has been changed.
+</code></pre></div></div>
+
+<p>You will then be asked to set up Wi-Fi:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Do you want to set up wifi? [Y or N]: Y
+</code></pre></div></div>
+
+<p>Edison will then scan for available networks. Enter the number for the network that you would like to connect to:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configure Edison: WiFi Connection
+
+Scanning: 1 seconds leftt
+
+0 :     Rescan for networks
+1 :     Manually input a hidden SSID
+2 :     MyNetworkName
+3 :     MyOtherNetworkName
+
+
+Enter 0 to rescan for networks.
+Enter 1 to input a hidden network SSID.
+Enter a number between 2 to 3 to choose one of the listed network SSIDs: 2
+</code></pre></div></div>
+
+<p>Once successfully connected, you should see a message similar to this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Done. Please connect your laptop or PC to the same network as this device and go to http://12.345.67.89 or http://myedison.local in your browser.
+</code></pre></div></div>
+
+<p>Entering either URL in a browser window should give you a page that looks like this:</p>
+
+<div class="mb-3">
+  <img src="/assets/img/edison/edison-browser.png" class="img-fluid" alt="Edison device information in browser" />
+</div>
+
+<p>Congratulations, Edison is now connected to Wi-Fi!</p>
+
+<h2 id="ssh-ing-into-edison-over-wi-fi">SSH-ing into Edison over Wi-Fi</h2>
+
+<p>Now that Edison is connected to Wi-Fi, it’s also possible to SSH over Wi-Fi, provided that the computer you want to log in from is on the same network. If so, open a new Terminal window and enter the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh root@myedison.local
+root@myedison.local's password:
+root@myedison:~#
+</code></pre></div></div>
+
+<p>When prompted for a password, use the password you created when configuring Edison.</p>
+
+<p>Congratulations, you can now SSH into Edison over Wi-Fi!</p>
+
+<h2 id="managing-packages-on-edison">Managing packages on Edison</h2>
+
+<p>Edison’s operating system is based off Yocto Linux, and it uses <a href="http://en.wikipedia.org/wiki/Opkg">opkg</a> as its package manager. There are two very helpful repositories to fetch packages from, and I definitely recommend using them as you lay out the foundations of your project:</p>
+
+<ul>
+  <li><a href="https://software.intel.com/en-us/articles/managing-devkit-libraries-intel-edison-or-intel-galileo-board">Intel IoT dev kit libraries</a></li>
+  <li><a href="http://alextgalileo.altervista.org/edison-package-repo-configuration-instructions.html">AlexT’s unofficial repository</a>—AlexT has done an awesome job of making popular packages available, such as git</li>
+</ul>
+
+<h2 id="wrapping-up">Wrapping up</h2>
+
+<p>This is just the beginning. Now, the fun begins! Stay tuned, as I hope to write additional posts on my adventures with Edison.</p>
+</div>
+
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'salman'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer bg-light">
+  <div class="container text-center">
+    <span class="text-muted small">
+      &#x000A9; 2017 Salman Faris.
+      See <a class="text-dark font-weight-bold" href="https://github.com/drejkim/drejkim.github.io/blob/master/LICENSE.md">license</a>.
+    </span>
+  </div>
+</footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>

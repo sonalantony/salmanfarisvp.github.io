@@ -1,0 +1,41 @@
+// Extension of the Bootstrap card component
+
+//
+// Overlay styles
+//
+
+$overlay-transition: all .2s ease-in-out !default;
+
+a.card {
+  @include transition($overlay-transition);
+}
+
+a.card.active,
+a.card:focus,
+a.card:hover {
+  border-color: $link-color;
+}
+
+a.card .card-img-overlay {
+  // To make sure the footer is visible, use a lower z-index than .card-footer
+  z-index: 990;
+  
+  opacity: 0;
+  @include border-radius($card-inner-border-radius);
+  @include transition($overlay-transition);
+}
+
+a.card .card-footer {
+  // z-index only works on positioned elements...
+  // Note: it seems to work in Chrome w/o having to set this... */
+  position: relative;
+
+  // To make sure the footer visible, use a higher z-index than .card-img-overlay
+  z-index: 1000;
+}
+
+a.card.active .card-img-overlay,
+a.card:focus .card-img-overlay,
+a.card:hover .card-img-overlay {
+  opacity: 0.75;
+}
