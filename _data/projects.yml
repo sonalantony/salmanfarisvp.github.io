@@ -1,18 +1,3 @@
-AndroidWearMotionSensors:
-  category: software
-  url: /projects/AndroidWearMotionSensors/
-  img: /assets/img/projects/AndroidWearMotionSensors.jpg
-  description: Using the accelerometer and gyroscope on an Android Wear device
-  excerpt: This project displays the raw accelerometer and gyroscope data on an Android Wear device. It also performs simple motion detection&mdash;when a shake or rotation is detected, the background color turns green.
-  youtube: https://www.youtube.com/embed/Yxne6YWGbE0
-  links:
-    -
-      name: View on GitHub
-      url: https://github.com/drejkim/AndroidWearMotionSensors
-    -
-      name: View blog post
-      url: /blog/2015/02/04/motion-sensors-on-android-wear
-
 SIGHT:For-the-Blind:
   category: hardware
   url: /projects/sight/
@@ -28,206 +13,153 @@ SIGHT:For-the-Blind:
       name: View blog post
       url: /blog/2017/30/10/sight
 
-edison-arduino101-iot:
+SEBi:Smart-Electric-Bin:
   category: hardware
-  url: /projects/edison-arduino101-iot/
-  img: /assets/img/projects/edison-arduino101-iot.jpg
-  description: Edison + Arduino 101 IoT demo
-  excerpt: This demo illustrates a simple IoT example by displaying an Arduino 101's IMU (accelerometer / gyroscope) data on a web page. In order to do this, an Intel Edison module is used to receive the data from the Arduino 101 via BLE (Bluetooth Low Energy), then sends it to a web server via WebSockets.
-  youtube: https://www.youtube.com/embed/NRZZRsqJQWY
+  url: /projects/sebi/
+  img: /assets/img/projects/sebi.jpg
+  description: Smart and efficient way to monitor your waste bin and help you to dispose of it at the correct time.
+  excerpt: When the bin is full, it will notify the waste management agency as well as us, so it will help the agency avoid the waste of fuel also make it possible for them to create a better map of collecting waste from citizens.
+  youtube: http://www.youtube.com/embed/kqWYw_brkwk
   links:
     -
       name: View on GitHub
-      url: https://github.com/drejkim/edison-arduino101-iot
+      url: https://github.com/salmanfarisvp/SEBi
     -
       name: View blog post
-      url: /blog/2016/04/08/using-edison-and-arduino-101-together
+      url: /blog/2017/08/10/sebi
 
-face-detection-node-opencv:
-  category: software
-  url: /projects/face-detection-node-opencv/
-  img: /assets/img/projects/face-detection-node-opencv.jpg
-  description: Real-time face detection using OpenCV, Node.js, and WebSockets
-  excerpt: This project performs real-time face detection by using the Node.js bindings for OpenCV. The processed frames are then streamed to a web browser using WebSockets.
-  youtube: https://www.youtube.com/embed/v2SY0naPBFw
-  links:
-    -
-      name: View on GitHub
-      url: https://github.com/drejkim/face-detection-node-opencv
-    -
-      name: View blog post
-      url: /blog/2014/12/02/real-time-face-detection-using-opencv-nodejs-and-websockets
-
-frogger:
-  category: software
-  url: /projects/frogger/
-  img: /assets/img/projects/frogger.jpg
-  description: My final project for Udacity's Object-Oriented JavaScript class
-  excerpt: The purpose of this class is to learn the best practices of object-oriented JavaScript by building an implementation of the classic arcade game, Frogger.
-  youtube: https://www.youtube.com/embed/dIu40myH9CY
-  links:
-    -
-      name: View site
-      url: http://drejkim.com/frogger/
-    -
-      name: View on GitHub
-      url: https://github.com/drejkim/frogger
-
-HackerBoxCar:
+Getting-Started-in-Android-Things-with-Raspberry-Pi:
   category: hardware
-  url: /projects/HackerBoxCar/
-  img: /assets/img/projects/HackerBoxCar.jpg
-  description: My implementation of the Autosport HackerBox
-  excerpt: The project uses the Autosport HackerBox kit and is capable of three modes... remote control, line-following, and autonomous. In remote-control mode, the car uses a companion mobile app to control its movements. In line-following mode, a pair of IR sensors detect a black line to control its path. In autonomous mode, an ultrasonic range sensor detects objects and attempts to avoid them.
-  youtube: https://www.youtube.com/embed/K7Yosm08pu0
+  url: /projects/androidthings/
+  img: /assets/img/projects/androidthings.jpg
+  description: Let's get started in Android Things with Raspberry Pi by blinking.
+  excerpt: Android Things makes developing connected embedded devices easy by providing the same Android development tools, best-in-class Android framework, and Google APIs that make developers successful on mobile.
+  youtube: http://www.youtube.com/embed/ZPSuvNxMEiQ
   links:
     -
       name: View on GitHub
-      url: https://github.com/drejkim/HackerBoxCar
+      url: https://github.com/salmanfarisvp/AndroidThings
     -
       name: View blog post
-      url: /blog/2017/07/03/my-experience-with-the-hackerbox-autosport-kit/
-  showcase: true
+      url: /blog/2017/26/09/andoidthings
 
-led-speech-edison:
+GooglePi-Google-Assistant-on-Raspberry-Pi:
   category: hardware
-  url: /projects/led-speech-edison/
-  img: /assets/img/projects/led-speech-edison.jpg
-  description: Speech-activated LEDs using Intel Edison, SparkFun blocks, Python, and CMU Sphinx
-  excerpt: This project combines basic circuit design and Python programming to control 4 LEDs by speech. It also uses CMU Sphinx, a speech recognition engine from Carnegie Mellon University.
-  youtube: https://www.youtube.com/embed/kVTV_qZtwlY
+  url: /projects/googlepi/
+  img: /assets/img/projects/googlepi.jpg
+  description: A DIY Google Home using your Raspberry Pi.
+  excerpt: In this project we are building a DIY Google Home using your Raspberry Pi, also know as Google Assistant.
+  youtube: http://www.youtube.com/embed/d7f4pch23X0
   links:
     -
       name: View on GitHub
-      url: https://github.com/drejkim/led-speech-edison
+      url: https://github.com/salmanfarisvp/
     -
       name: View blog post
-      url: /blog/2015/04/15/speech-activated-leds-using-intel-edison
+      url: /blog/2017/06/05/
 
-LediMote:
+DIY-Audio-Amplifier:
   category: hardware
-  url: /projects/LediMote/
-  img: /assets/img/projects/LediMote.jpg
-  description: Remote-controlled LEDs using Intel Edison and Node.js (for web, iOS, and Android)
-  excerpt: This project illustrates how to turn on and off LEDs from a web page, an iOS app, or an Android app using Intel Edison.
-  youtube: https://www.youtube.com/embed/i61g4aYkrI0
+  url: /projects/diyaudioamplifier/
+  img: /assets/img/projects/diyaudioamplifier.jpg
+  description:Simple Audio Amplifier based on LM386.
+  excerpt: LM386 basically a low voltage audio power amplifier. It is suitable for battery-powered devices such as radios, guitar amplifiers, and hobby electronics projects. The IC consists of an 8 pin dual in-line package (DIP-8) and can output 0.25 to 1 watts of power, depending on the model, using a 9-volt power supply.
+  youtube: http://www.youtube.com/embed/vcGQ9vh7Vzc
   links:
     -
       name: View on GitHub
-      url: https://github.com/drejkim/LediMote
+      url: https://github.com/salmanfarisvp/
     -
       name: View blog post
-      url: /blog/2015/06/25/ledimote-remote-controlled-leds-using-intel-edison-and-nodejs
+      url: /blog/2017/24/04/
 
-multi-screen-demo:
-  category: software
-  url: /projects/multi-screen-demo/
-  img: /assets/img/projects/multi-screen-demo.jpg
-  description: Controlling your PC web browser from your mobile phone
-  excerpt: multi-screen-demo is a Node.js / AngularJS app that uses socket.io (WebSockets) to pair a mobile and a PC. The app contains two demos. The first uses gestures on a mobile and shows the detected events on a paired PC. The second uses a simple D-pad controller on a mobile to move a target around on a paired PC.
-  youtube: https://www.youtube.com/embed/7O-rgDwTI9I
-  links:
-    -
-      name: View site
-      url: http://multi-screen-demo.herokuapp.com/
-    -
-      name: View on GitHub
-      url: https://github.com/drejkim/multi-screen-demo
-    -
-      name: View blog post
-      url: /blog/2014/02/24/using-websockets-for-developing-multi-screen-user-experiences
-
-O Holy Night:
+Jarvis-Personal-Assistant:
   category: hardware
-  url: /projects/o-holy-night/
-  img: /assets/img/projects/o-holy-night.jpg
-  description: Recreating the Nativity Scene using the Particle Photon and NeoPixels
-  excerpt: This project uses familiar ingredients, namely the Particle Photon and NeoPixels, and some paper cutouts to recreate the Nativity Scene. The lights are controlled with a custom iOS app.
-  youtube: https://www.youtube.com/embed/TUcphhJK0uM
+  url: /projects/Jarvis-Personal-Assistant/
+  img: /assets/img/projects/Jarvis-Personal-Assistant.jpg
+  description: A personal assistant powered by Linklt Smart 7688 Duo and Telegram Bot for a smart office and smart home.
+  excerpt: Have you ever said, "I wish I had a personal assistant"? Yeah, everyone needs a personal assistant to do things. Now here I am introducing a personal assistant based on Linklt Smart 7688 Duo and Telegram. It has both the powers of Linux and Arduino.
+  youtube: http://www.youtube.com/embed/ZqbgN57VF70
   links:
     -
       name: View on GitHub
-      url: https://github.com/drejkim/o-holy-night
+      url: https://github.com/salmanfarisvp/Jarvis-Linklt7688
     -
       name: View blog post
-      url: /blog/2016/12/23/o-holy-night/
+      url: /blog/2017/13/03/
 
-particle-light-alexa:
+Arduino-Blink-With-NodeJS:
   category: hardware
-  url: /projects/particle-light-alexa/
-  img: /assets/img/projects/particle-light-alexa.jpg
-  description: Asking Amazon Alexa to control a light ft. NeoPixels and Particle Photon
-  excerpt: Ask Amazon Alexa to control a light. In this case, the "light" is a NeoPixel ring connected to a Particle Photon. The functions to control the light are exposed through the <a href="https://docs.particle.io/reference/firmware/photon/#particle-function-">Particle Cloud</a>. The Alexa skill then calls the functions using the <a href="https://docs.particle.io/reference/javascript/#callfunction">JavaScript Particle API</a>. This project has also been featured on <a href="https://blog.hackster.io/hacksters-handpicked-projects-of-the-week-c8045ee5cfe5">Hackster's Handpicked Projects of the Week</a>.
-  youtube: https://www.youtube.com/embed/y9VvusYF1sg
+  url: /projects/Arduino-Blink-With-NodeJS/
+  img: /assets/img/projects/Arduino-Blink-With-NodeJS.jpg
+  description: Johnny-Five is the JavaScript Robotics & IoT Platform.
+  excerpt: In here I'll show you how to blink an LED using Node.js with Johnny-Five.
+  youtube: http://www.youtube.com/embed/farissalmannbr
   links:
     -
       name: View on GitHub
-      url: https://github.com/drejkim/particle-light-alexa
+      url: https://github.com/salmanfarisvp/
     -
       name: View blog post
-      url: /blog/2016/09/10/alexa-turn-on-the-light/
-  showcase: true
+      url: /blog/2017/22/01/
 
-particle-weather-station:
+Telegram-Bot-With-Raspberry-Pi:
   category: hardware
-  url: /projects/particle-weather-station/
-  img: /assets/img/projects/particle-weather-station.jpg
-  description: Monitoring temperature and humidity using the Particle Photon
-  excerpt: Create your own weather station with the Particle Photon board. A DHT11 sensor is used to measure temperature and humidity. Ubidots, a cloud service, is then used to visualize the data in real time.
-  youtube: https://www.youtube.com/embed/XKxeXtfn4MM
+  url: /projects/Telegram-Bot-With-Raspberry-Pi/
+  img: /assets/img/projects/Telegram-Bot-With-Raspberry-Pi.jpg
+  description: Host a Telegram Bot on your Raspberry Pi and chat with your brand new IoT device!.
+  excerpt: Learn how to use the Telegram Bot, host a Telegram Bot on your Raspberry Pi, and use the messaging app to interact with your device.
+  youtube: http://www.youtube.com/embed/
   links:
     -
       name: View on GitHub
-      url: https://github.com/drejkim/particle-weather-station
+      url: https://github.com/salmanfarisvp/TelegramBot
     -
       name: View blog post
-      url: /blog/2016/05/25/monitoring-temperature-and-humidity-using-the-particle-photon
+      url: /blog/2017/04/01/
 
-particle-weather-station-alexa:
+Particle + Raspberry-Pi:
   category: hardware
-  url: /projects/particle-weather-station-alexa/
-  img: /assets/img/projects/particle-weather-station-alexa.jpg
-  description: Asking Amazon Alexa for the temperature and humidity from a Particle Photon
-  excerpt: This project integrates Amazon Alexa to the original <a href="/projects/particle-weather-station/">particle-weather-station</a> project. Instead of visualizing the data on a dashboard, you can ask Alexa for the current temperature or humidity. To communicate the data between Particle and Alexa, the variables are exposed through the <a href="https://docs.particle.io/reference/firmware/photon/#particle-variable-">Particle Cloud</a>, then the Alexa skill gets the data using the <a href="https://docs.particle.io/reference/javascript/">JavaScript Particle API</a>.
-  youtube: https://www.youtube.com/embed/j5CpMcM5yRI
+  url: /projects/Particle+Raspberry-Pi/
+  img: /assets/img/projects/Particle+Raspberry-Pi.jpg
+  description: The world's favorite low-cost computer now connects to the world's most popular IoT platform.
+  excerpt: Intergartion between Particle Cloud and Raspberry Pi.
+  youtube: http://www.youtube.com/embed/
   links:
     -
       name: View on GitHub
-      url: https://github.com/drejkim/particle-weather-station-alexa
+      url: https://www.hackster.io/Salmanfarisvp/particle-raspberry-pi-caa234
     -
       name: View blog post
-      url: /blog/2016/08/30/asking-alexa-for-the-temperature-and-humidity-from-a-particle-photon
+      url: /blog/2017/02/01/
 
-Reading Quantified:
-  category: software
-  url: /projects/reading-quantified/
-  img: /assets/img/projects/reading-quantified.jpg
-  description: A dashboard for analyzing my reading habits
-  excerpt: This project analyzes and visualizes my reading habits. The book information is stored on Trello, and Python is used to parse, analyze, and store the data in a database. The web app uses AngularJS and d3.js to visualize the data on a dashboard. The backend is powered by Parse Server and is hosted on Heroku.
-  youtube: https://www.youtube.com/embed/NoB-0xQAeqY
+WebServerBlink-Using-NodeMCU:
+  category: hardware
+  url: /projects/WebServerBlink-Using-NodeMCU/
+  img: /assets/img/projects/WebServerBlink-Using-NodeMCU.jpg
+  description: Hello World in IoT.
+  excerpt: NodeMCU is an open source IoT platform. It includes firmware which runs on the ESP8266 Wi-Fi SoC. It's a simple Blink using Webserver.
+  youtube: http://www.youtube.com/embed/
   links:
     -
-      name: View site
-      url: http://drejkim.com/reading-quantified/
-    -
       name: View on GitHub
-      url: https://github.com/drejkim/reading-quantified
+      url: https://github.com/salmanfarisvp/webserverblink-using-nodemcu
     -
       name: View blog post
-      url: /blog/2017/04/11/redesigning-reading-quantified
-  showcase: true
+      url: /blog/2016/30/12/
 
-rte-angular:
-  category: software
-  url: /projects/rte-angular/
-  img: /assets/img/projects/rte-angular.jpg
-  description: An AngularJS rich-text editor
-  excerpt: This is a custom AngularJS directive for adding a rich-text editor to your web page. It includes all the basic text formatting options, as well as the ability to include image and video links.
-  youtube: https://www.youtube.com/embed/G9czu0WwKVA
+Bus-Status-using-Artik-Cloud-and-Intel-Edison:
+  category: hardware
+  url: /projects/Bus-Status-using-Artik-Cloud-and-Intel-Edison/
+  img: /assets/img/projects/Bus-Status-using-Artik-Cloud-and-Intel-Edison.jpg
+  description: IOT project which count the number of passengers in a Transport bus and one who connected to internet can check is the bus is crowded or not
+  excerpt: This is an IOT project which helps the Bus travelers to know the rush in the bus in-order to take proper decision based on it. For example if someone heavy and breakable things in his/her hands then it is not safe to travel in a crowded bus but in-order to know the status of the bus one should wait until the bus reaches the stop. But if you know the number of passengers the bus in the before the bus reach the stop then we could save time and take a taxi.
+  youtube: http://www.youtube.com/embed/IO9KlPntuiE
   links:
     -
-      name: View site
-      url: http://drejkim.com/rte-angular/
-    -
       name: View on GitHub
-      url: https://github.com/drejkim/rte-angular
+      url: https://github.com/salmanfarisvp/artikbus
+    -
+      name: View blog post
+      url: /blog/2016/29/09/
+
