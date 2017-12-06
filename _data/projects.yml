@@ -13,20 +13,20 @@ AndroidWearMotionSensors:
       name: View blog post
       url: /blog/2015/02/04/motion-sensors-on-android-wear
 
-edi-cam:
+SIGHT:For-the-Blind:
   category: hardware
-  url: /projects/edi-cam/
-  img: /assets/img/projects/edi-cam.jpg
-  description: Video streaming on Intel Edison
-  excerpt: This project shows how to stream video to a web browser from a webcam connected to Intel Edison, all while powered by a 9V battery. A Node.js server on Edison listens for the incoming video stream and broadcasts it to all connected browsers via WebSockets. On the client-side, the video is then decoded using jsmpeg and rendered onto an HTML canvas element.
-  youtube: http://www.youtube.com/embed/nVDL2-bFT3Y
+  url: /projects/sight/
+  img: /assets/img/projects/sight.jpg
+  description: A pair of smart glasses for the blind. Powered by Android Things and TensorFlow.
+  excerpt: Sight does have three main parts, a raspberry pi 3 (powered by android things), camera and a button. When the person press the button on the Sight, The Sight will take a picture and analyze the image using tensor flow and detect what is that picture is about, then using a speaker or headphone, the Sight will voice assist the person about that picture
+  youtube: http://www.youtube.com/embed/du8LyRrKU0k
   links:
     -
       name: View on GitHub
-      url: https://github.com/drejkim/edi-cam
+      url: https://github.com/FoxLabMakerSpace/SIGHT-For-the-Blind
     -
       name: View blog post
-      url: /blog/2014/12/08/video-streaming-on-edison
+      url: /blog/2017/30/10/video-streaming-on-edison
 
 edison-arduino101-iot:
   category: hardware
