@@ -1,7 +1,7 @@
 SIGHT:For-the-Blind:
   category: hardware
   url: /projects/sight/
-  img: /assets/img/projects/sight1.jpg
+  img: /assets/img/projects/sight.jpg
   description: A pair of smart glasses for the blind. Powered by Android Things and TensorFlow.
   excerpt: Sight does have three main parts, a raspberry pi 3 (powered by android things), camera and a button. When the person press the button on the Sight, The Sight will take a picture and analyze the image using tensor flow and detect what is that picture is about, then using a speaker or headphone, the Sight will voice assist the person about that picture
   youtube: http://www.youtube.com/embed/du8LyRrKU0k
