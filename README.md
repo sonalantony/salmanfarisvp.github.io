@@ -1,2 +1,2 @@
-# salmanfarisvp.github.io
+# sonalantony.github.io
 Personal Website 
